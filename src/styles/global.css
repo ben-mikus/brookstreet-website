@@ -1,0 +1,29 @@
+/* Global Variables */
+/* Make modifications here to change colors or fonts across the entire site */
+:root {
+    --color-primary: #203040;
+    --color_background: #ffffff;
+    --color-test: #222222;
+    --font-primary: Manrope, Nunito Sans;
+}
+
+/* Default styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color_background);
+    color: var(--color-test);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary);
+}
