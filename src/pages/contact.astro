@@ -1,7 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageLinks from "../components/PageLinks.astro";
+import "../styles/inner-pages.css";
 ---
-
 <BaseLayout title="Contact | Brook Street">
-    <h1>Contact Us!</h1>
+  <div class="inner-page">
+    <section class="page-hero contact-hero">
+      <p class="eyebrow">Contact Us</p>
+      <h1>You Have Questions?<br /><strong>We Have <span class="green">Answers</span></strong></h1>
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+    <PageLinks />
+  </div>
 </BaseLayout>

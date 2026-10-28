@@ -3,8 +3,113 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Brook Street Bookkeeping">
-	<section class="hero">
-		<h1>Effortless eCommerce Bookkeeping</h1>
-		<p>Professional Bookkeeping Services.</p>
-	</section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        <span>Effortless</span>
+        <span class="hero-highlight">eCommerce</span>
+        <span>Bookkeeping</span>
+      </h1>
+      <p>Professional bookkeeping services designed to help your business stay organized, informed, and ready to grow.</p>
+      <a href="/contact" class="hero-button">Get in Touch</a>
+    </div>
+  </section>
+
+  <section class="benefits" aria-label="Our approach to bookkeeping">
+    <article class="benefit">
+      <div class="benefit-icon" aria-hidden="true"></div>
+      <div>
+        <h2><span class="green">Built</span> to Handle Complexity</h2>
+        <p>From online stores to wholesale and retail, selling physical products often creates bookkeeping complexity. Our systems keep your financials organized within one trustworthy set of records.</p>
+      </div>
+    </article>
+    <article class="benefit">
+      <div class="benefit-icon" aria-hidden="true"></div>
+      <div>
+        <h2>Flexible as <span class="yellow">You Grow</span></h2>
+        <p>As your business expands into new sales channels, products, and markets, your bookkeeping should grow with it. We build systems that adapt as your operations evolve.</p>
+      </div>
+    </article>
+    <article class="benefit">
+      <div class="benefit-icon" aria-hidden="true"></div>
+      <div>
+        <h2><span class="green">Clarity</span> Over Confusion</h2>
+        <p>We don’t just deliver financials—we review them with you. You’ll always understand your numbers and what they mean for your business.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="support" aria-labelledby="support-heading">
+    <h2 id="support-heading">Who We Support</h2>
+    <p>Clients have come to us when…</p>
+    <ul>
+      <li>Bookkeeping has become too time consuming.</li>
+      <li>Sales are spread across multiple platforms or brand names.</li>
+      <li>QuickBooks integrations aren’t producing reliable numbers.</li>
+      <li>Their business has grown, but they’re not confident in their financials.</li>
+    </ul>
+    <p class="support-invitation">Sound familiar? Then we’d love to hear from you!</p>
+    <a class="contact-button" href="/contact">Contact Us</a>
+  </section>
+
+  <nav class="home-links" aria-label="Explore Brook Street">
+    <a href="/services">View Our Services</a>
+    <a href="/pricing">See Our Pricing</a>
+    <a href="/contact">Reach Out Today</a>
+  </nav>
+
+  <style>
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 70vh;
+      padding: 4rem 5%;
+      text-align: left;
+      background-color: var(--color-surface);
+    }
+    .hero-content { max-width: 750px; }
+    h1 { font-weight: 400; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.15; margin-bottom: 1.5rem; }
+    h1 span { display: block; }
+    .hero-highlight { color: var(--color-primary); }
+    .hero p { font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem; }
+    .hero-button {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      background-color: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background-color 0.2s ease;
+    }
+    .hero-button:hover { background-color: var(--color-primary-hover); }
+    .benefits { max-width: 960px; margin: 0 auto; padding: 5rem 5% 3.5rem; }
+    .benefit { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 3rem; align-items: start; }
+    .benefit + .benefit { margin-top: 3.5rem; }
+    .benefit-icon { width: 120px; height: 120px; margin-top: 0.4rem; border: 1px solid var(--color-border); }
+    h2 { font-weight: 500; font-size: clamp(1.5rem, 2.5vw, 2rem); margin: 0 0 0.5rem; color: var(--color-heading); letter-spacing: -0.035em; }
+    .benefit p, .support p, .support li { font-size: clamp(1.05rem, 1.7vw, 1.35rem); line-height: 1.55; }
+    .benefit p { margin: 0; }
+    .green { color: var(--color-primary); }
+    .yellow { color: var(--color-accent); }
+    .support { max-width: 864px; margin: 0 auto; padding: 2.5rem 3rem; border-radius: 42px; background: var(--color-surface); box-shadow: 0 8px 24px rgb(36 44 39 / 4%); }
+    .support p { margin: 1rem 0; }
+    .support ul { padding-left: 2rem; margin: 1.25rem 0; }
+    .support li { padding-left: 0.25rem; margin-bottom: 1rem; }
+    .support .support-invitation { margin-bottom: 0.5rem; }
+    .contact-button { display: inline-block; background: var(--color-primary); color: #fff; border-radius: 999px; padding: 0.3rem 0.9rem; text-transform: none; text-decoration: none; font-size: 1rem; }
+    .contact-button:hover { background: var(--color-primary-hover); }
+    .home-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem 4rem; padding: 5rem 5%; }
+    .home-links a { color: var(--color-primary); text-transform: none; text-decoration: underline; text-decoration-color: var(--color-highlight); text-decoration-thickness: 2px; font-size: 1rem; }
+    .home-links a:hover { text-decoration-color: var(--color-primary); }
+    a:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 5px; }
+    @media (max-width: 600px) {
+      .benefits { padding-top: 3rem; }
+      .benefit { grid-template-columns: 72px minmax(0, 1fr); gap: 1.25rem; }
+      .benefit-icon { width: 72px; height: 72px; }
+      .benefit + .benefit { margin-top: 2.5rem; }
+      .support { margin: 0 5%; padding: 2rem 1.5rem; border-radius: 28px; }
+      .home-links { gap: 1.5rem; padding: 3rem 5%; flex-direction: column; align-items: center; }
+    }
+  </style>
 </BaseLayout>

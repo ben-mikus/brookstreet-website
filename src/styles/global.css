@@ -1,17 +1,19 @@
-/* Global Variables */
-/* Make modifications here to change colors or fonts across the entire site */
+/* Shared colors keep the pages calm, warm, and consistent. */
 :root {
-    --color-primary: #203040;
+    --color-primary: #286747;
     --color_background: #ffffff;
-    --color-test: #222222;
+    --color-test: #444b47;
+    --color-heading: #242c27;
+    --color-surface: #f6f7f4;
+    --color-border: #e2e7e0;
+    --color-muted: #68736b;
+    --color-accent: #8a6b16;
+    --color-highlight: #f4dc84;
+    --color-primary-hover: #20543a;
     --font-primary: Manrope, Nunito Sans;
 }
 
-/* Default styling */
-* {
-    box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
 body {
     margin: 0;
     background-color: var(--color_background);
@@ -19,11 +21,5 @@ body {
     font-family: var(--font-primary);
     line-height: 1.6;
 }
-
-h1, h2, h3 {
-  line-height: 1.2;
-}
-
-a {
-  color: var(--color-primary);
-}
+h1, h2, h3 { line-height: 1.2; color: var(--color-heading); }
+a { color: var(--color-primary); text-underline-offset: .25em; }

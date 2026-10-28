@@ -1,7 +1,45 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageLinks from "../components/PageLinks.astro";
+import "../styles/inner-pages.css";
+const monthlyServices = [
+  { title: "Financial Statement Preparation", description: "Each month, you receive clear financial reports including an Income Statement and a Balance Sheet. These reports help you monitor business performance and give you confidence in the numbers that fuel your decision-making." },
+  { title: "Accuracy Down to Each Penny", description: "We keep your financial records accurate and up to date by thoroughly reconciling our records against your sales platforms, bank accounts, credit cards, and payment processors each month. This ensures your books always match real cash activity, giving you reliable financial data you can trust." },
+  { title: "E-Commerce Sales & Fee Tracking", description: "We organize and track sales across all your platforms while accurately recording marketplace fees, payment processor charges, refunds, and discounts. This provides a clear view of your true revenue and helps you understand how each sales channel contributes to your business." },
+  { title: "Ongoing Account Support", description: "We provide ongoing assistance to keep your accounts running smoothly, address questions as they arise, and make adjustments when your business changes. With continuous oversight and reliable support, your books stay organized and ready whenever you need them." },
+];
+const catchUpServices = [
+  { title: "Income and Expense Management", description: "We provide transaction management looking back as far as 24 months, categorizing income and expenses so your records accurately reflect how your business has performed. This process turns messy or incomplete books into reliable financial data." },
+  { title: "Thorough Account Reconciliation", description: "We reconcile your bank accounts, credit cards, and payment processors for the catch-up period to ensure balances match real transactions. This confirms your records are complete and eliminates discrepancies before moving forward." },
+  { title: "Complete Financial Statements", description: "We generate financial statements so you can clearly see your business performance for the updated period. These reports help you move forward with confidence and provide clean records for tax filing or planning." },
+];
 ---
-
-<BaseLayout title="Contact | Brook Street">
-    <h1>Our Services</h1>
+<BaseLayout title="Services | Brook Street">
+  <div class="inner-page">
+    <section class="page-hero">
+      <p class="eyebrow">Our Services</p>
+      <h1>Exceptional Services<br /><strong>for <span class="green">Exceptional</span> Clients</strong></h1>
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+    <section class="page-section" id="monthlybookkeeping" aria-labelledby="monthly-heading">
+      <div class="section-heading">
+        <h2 id="monthly-heading">Monthly Bookkeeping</h2>
+        <p>A comprehensive ongoing service that maintains your financial records with precision.</p>
+      </div>
+      <div class="service-grid">
+        {monthlyServices.map(service => <article><div class="icon-box" aria-hidden="true"></div><h3>{service.title}</h3><p>{service.description}</p></article>)}
+      </div>
+    </section>
+    <section class="page-section" id="bookscatchup" aria-labelledby="catch-up-heading">
+      <div class="section-heading">
+        <h2 id="catch-up-heading">Books Catch-Up</h2>
+        <p>A one-time service designed to restore order to accounting that has fallen behind.</p>
+      </div>
+      <div class="service-grid catch-up">
+        {catchUpServices.map(service => <article><div class="icon-box" aria-hidden="true"></div><h3>{service.title}</h3><p>{service.description}</p></article>)}
+      </div>
+    </section>
+    <div class="question-cta"><p>Don’t see your question?</p><a class="contact-button" href="/contact">Contact Us</a></div>
+    <PageLinks />
+  </div>
 </BaseLayout>

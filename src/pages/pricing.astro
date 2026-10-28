@@ -1,7 +1,43 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageLinks from "../components/PageLinks.astro";
+import "../styles/inner-pages.css";
 ---
-
-<BaseLayout title="Contact | Brook Street">
-    <h1>Pricing</h1>
+<BaseLayout title="Pricing | Brook Street">
+  <div class="inner-page">
+    <section class="page-hero">
+      <p class="eyebrow">Our Pricing</p>
+      <h1>Pay Only for<br /><strong>What You <span class="green">Need</span></strong></h1>
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+    <section class="page-section pricing-section" id="monthlybookkeeping" aria-labelledby="monthly-heading">
+      <div class="section-heading">
+        <h2 id="monthly-heading">Monthly Bookkeeping</h2>
+        <p>Our pricing is custom tailored to your business needs to keep prices fair and transparent while reflecting the work required.</p>
+      </div>
+      <!-- The source pricing table is an image. Replace this box with the final asset. -->
+      <div class="pricing-table-box" aria-hidden="true"></div>
+      <div class="pricing-note">
+        <h3>Every Business is Different</h3>
+        <p>We consider that when it comes to pricing. Your final monthly fee is determined by factors such as business size and operational complexity. The table above provides an idea of what this means for businesses of different sizes.</p>
+        <p>Before any work begins, you’ll receive a fixed monthly quote and know exactly what to expect. Regardless of what you pay, you’ll receive full bookkeeping support.</p>
+      </div>
+      <div class="accent-box" aria-hidden="true"></div>
+    </section>
+    <section class="page-section pricing-section" id="bookscatchup" aria-labelledby="catch-up-heading">
+      <div class="section-heading">
+        <h2 id="catch-up-heading">Books Catch-Up</h2>
+        <p>Catch-up pricing reflects the complexity of your business and the number of months to be constructed, ensuring fair costs while accurately restoring your financial records.</p>
+      </div>
+      <p>Catch-up bookkeeping is priced as a one-time project that is based on the number of historical months requiring reconstruction in addition to the size and operational complexity of your business. Every project begins with an assessment of your needs, and you’ll receive an accurate and transparent quote before any work begins.</p>
+      <div class="accent-box" aria-hidden="true"></div>
+    </section>
+    <section class="quote-intro" id="customquote" aria-labelledby="quote-heading">
+      <h2 id="quote-heading">Want a Custom Quote?</h2>
+      <p>Eliminate the guesswork—get in touch for a personalized quote hassle free.</p>
+      <a class="contact-button" href="/contact">Contact Us</a>
+    </section>
+    <div class="question-cta"><p>Don’t see your question?</p><a class="contact-button" href="/contact">Contact Us</a></div>
+    <PageLinks />
+  </div>
 </BaseLayout>
